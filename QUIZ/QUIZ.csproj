@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D415651C-7CD0-4609-84BD-ED93CDBCB918}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QUIZ</RootNamespace>
+    <AssemblyName>QUIZ</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebCam_Capture, Version=1.0.2395.24959, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Desktop\WebCam_Capture.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddQuestAndAns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddQuestAndAns.Designer.cs">
+      <DependentUpon>AddQuestAndAns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Answers.cs" />
+    <Compile Include="DisplaySound.cs" />
+    <Compile Include="End.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="End.Designer.cs">
+      <DependentUpon>End.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JsonSerializer.cs" />
+    <Compile Include="Questions.cs" />
+    <Compile Include="phone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="phone.Designer.cs">
+      <DependentUpon>phone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="quizCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="quizCart.Designer.cs">
+      <DependentUpon>quizCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Win.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Win.Designer.cs">
+      <DependentUpon>Win.cs</DependentUpon>
+    </Compile>
+    <Compile Include="wykresy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wykresy.Designer.cs">
+      <DependentUpon>wykresy.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddQuestAndAns.resx">
+      <DependentUpon>AddQuestAndAns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="End.resx">
+      <DependentUpon>End.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="phone.resx">
+      <DependentUpon>phone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="quizCart.resx">
+      <DependentUpon>quizCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Win.resx">
+      <DependentUpon>Win.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wykresy.resx">
+      <DependentUpon>wykresy.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ans.json" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="questions.json" />
+    <None Include="Resources\tabela.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\47985.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kolo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kolo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kolo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kolo1used.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kolo2used.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kolo3used.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brawo.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plum.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tiditi.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zle.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabela1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabela2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabela3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabela4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabela5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabela6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabela7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabela8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabela9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabela10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabela11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabela12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ending Music 1999.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Intro.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round 1 music.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puchar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dobrze.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indeks.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bbc9154ba1758b447e8c7547fe0f.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\absurdy-prl_23814353.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PRL2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_Cogs_Gears_Options_Setting_Preferences-512.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
